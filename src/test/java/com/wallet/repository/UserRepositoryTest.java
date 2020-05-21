@@ -1,6 +1,5 @@
 package com.wallet.repository;
 
-<<<<<<< HEAD
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -11,19 +10,16 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-=======
-import com.wallet.entity.User;
-import org.junit.jupiter.api.Test;
->>>>>>> 104fa58097c0c4078fb608c83ef58f6256fc57f9
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import com.wallet.entity.User;
 
+@RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserRepositoryTest {
 
-<<<<<<< HEAD
 	private static final String EMAIL = "email@teste.com";
 	
 	@Autowired
@@ -61,23 +57,6 @@ public class UserRepositoryTest {
 		Optional<User> response = repository.findByEmailEquals(EMAIL);
 		
 		assertTrue(response.isPresent());
-		assertEquals(response.get().getEmail(), EMAIL);
+		assertEquals(response.get().getEmail(), EMAIL); 
 	}
-=======
-    @Autowired
-    UserRepository repository;
-
-    @Test
-    public void testSave() {
-        User u = new User();
-        u.setName("Teste");
-        u.setPassword("123456");
-        u.setEmail("teste@teste.com");
-
-        User response = repository.save(u);
-
-        assertNotNull(response);
-    }
-
->>>>>>> 104fa58097c0c4078fb608c83ef58f6256fc57f9
 }
